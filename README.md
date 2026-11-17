@@ -46,6 +46,27 @@ A **CineVity** egy modern, gyors és letisztult asztali videólejátszó Windows
 - **Feliratok:** Nyisd meg a felirat panelt a helyi vagy beépített feliratok kiválasztásához, illetve az online kereséshez. A **Fiók** gombra kattintva saját OpenSubtitles-fiókkal is bejelentkezhetsz.
 - **Hang és kép finomhangolása:** A lejátszó vezérlőpultján érheted el az Equalizert, az Éjszakai módot, a felskálázást és a képernyőkép-készítést.
 
+### Billentyűparancsok
+
+| Billentyű | Művelet |
+| --- | --- |
+| `Space` | Lejátszás / Szünet |
+| `F` | Teljes képernyő ki/be |
+| `Esc` | Kilépés a teljes képernyőből |
+| `M` | Némítás ki/be |
+| `↑` / `↓` | Hangerő +5% / -5% |
+| `←` / `→` | Tekerés -5 mp / +5 mp |
+| `Shift` + `←` / `→` | Előző / Következő videó a lejátszási listában |
+| `[` / `]` | Lejátszási sebesség -0.25x / +0.25x |
+| `Backspace` | Lejátszási sebesség visszaállítása (1.0x) |
+| `A` | Képarány váltása |
+| `N` | Éjszakai mód (DRC) ki/be |
+| `S` | Képernyőkép készítése |
+| `I` | Film / Sorozat részletek megnyitása |
+| `Z` / `X` | Felirat késleltetés -0.1 mp / +0.1 mp |
+| `Alt` + `Z` / `X` | Felirat késleltetés -1.0 mp / +1.0 mp |
+| `J` / `K` (vagy `Shift` + `Z` / `X`) | Hang késleltetés -0.1 mp / +0.1 mp |
+
 ---
 
 ## 🇬🇧 English
@@ -89,6 +110,27 @@ A **CineVity** egy modern, gyors és letisztult asztali videólejátszó Windows
 - **Using the Library:** Add your media folders to browse Movies and TV Series with artwork and episode tracking.
 - **Subtitles:** Open the Subtitles panel to pick embedded/local tracks or search OpenSubtitles.com. Click **Fiók** (Account) to sign in with your own OpenSubtitles account.
 - **Audio & Video Tuning:** Use the player controls to toggle Upscaling shaders, Equalizer presets, Night Mode, or capture screenshots.
+
+### Keyboard Shortcuts
+
+| Key | Action |
+| --- | --- |
+| `Space` | Play / Pause |
+| `F` | Toggle Fullscreen |
+| `Esc` | Exit Fullscreen |
+| `M` | Toggle Mute |
+| `↑` / `↓` | Volume +5% / -5% |
+| `←` / `→` | Seek -5s / +5s |
+| `Shift` + `←` / `→` | Previous / Next track in playlist |
+| `[` / `]` | Playback speed -0.25x / +0.25x |
+| `Backspace` | Reset playback speed (1.0x) |
+| `A` | Toggle Aspect Ratio |
+| `N` | Toggle Night Mode (DRC) |
+| `S` | Take Screenshot |
+| `I` | Open Movie / TV Show details |
+| `Z` / `X` | Subtitle delay -0.1s / +0.1s |
+| `Alt` + `Z` / `X` | Subtitle delay -1.0s / +1.0s |
+| `J` / `K` (or `Shift` + `Z` / `X`) | Audio delay -0.1s / +0.1s |
 
 ---
 
