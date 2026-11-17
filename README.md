@@ -39,35 +39,3 @@ Online Search: Open the Subtitles panel to search OpenSubtitles.com. You can opt
 Automatic Updates
 When online, CineVity checks for updates shortly after startup.
 If a newer version is available, a native dialog displays the version and release notes. Click Frissítés to download, install, and relaunch automatically, or Később to skip.
-Development Setup
-Prerequisites
-Node.js (v18+) & npm
-Rust (stable toolchain) & MSVC Build Tools (Windows)
-libmpv: Place libmpv-2.dll in src-tauri/libmpv/libmpv-2.dll
-Shaders: Place GLSL shaders in src-tauri/shaders/
-Environment Variables
-
-Copy .env.example to .env and fill in your API keys:
-
-env
-VITE_TMDB_API_KEY=your_tmdb_api_key
-VITE_OPENSUBTITLES_API_KEY=your_opensubtitles_api_key
-Run in Development
-powershell
-npm install
-npm run tauri dev
-Build Installer Locally
-powershell
-npm run tauri build
-Releasing Updates
-
-Releases are published to the public kuriouss33/cinevity-releases repository using scripts/release.ps1.
-
-One-Time Setup
-Ensure GitHub CLI (gh) is installed and authenticated (gh auth login).
-Ensure your Tauri signing private key exists at %USERPROFILE%\.tauri\cinevity.key (matching the public key in src-tauri/tauri.conf.json).
-Publish a New Version
-powershell
-.\scripts\release.ps1 -Version 1.0.1 -Notes "Release notes here" -KeyPassword "YOUR_KEY_PASSWORD"
-
-This bumps the version in package.json, src-tauri/tauri.conf.json, and src-tauri/Cargo.toml, builds and signs the NSIS installer, generates latest.json, and creates the GitHub Release. Pass -SkipUpload to build and generate artifacts locally without uploading.
