@@ -89,3 +89,30 @@ A **CineVity** egy modern, gyors és letisztult asztali videólejátszó Windows
 - **Using the Library:** Add your media folders to browse Movies and TV Series with artwork and episode tracking.
 - **Subtitles:** Open the Subtitles panel to pick embedded/local tracks or search OpenSubtitles.com. Click **Fiók** (Account) to sign in with your own OpenSubtitles account.
 - **Audio & Video Tuning:** Use the player controls to toggle Upscaling shaders, Equalizer presets, Night Mode, or capture screenshots.
+
+---
+
+## 🛠️ Technical Overview (For Developers)
+
+### Languages & Core Stack
+- **Frontend:** TypeScript, React 19, Vite, Lucide React
+- **Backend:** Rust (Edition 2024), Tauri v2
+- **Media Engine:** C/C++ `libmpv` (`libmpv-2.dll`) integrated via the `libmpv2` Rust crate, with native Windows `HWND` embedding
+- **Shaders:** GLSL upscaling shaders (`FSRCNNX`, `Lanczos Sharp`, `Cinema Smooth`)
+- **Database:** Embedded SQLite via `rusqlite` (`bundled` feature)
+- **Automation:** PowerShell (`scripts/release.ps1`)
+
+### Tauri v2 Plugins & Capabilities
+- `tauri-plugin-dialog` — Native file pickers and update confirmation dialogs
+- `tauri-plugin-window-state` — Window size and position persistence
+- `tauri-plugin-updater` — Signed update checks, downloads, and installation
+- `tauri-plugin-process` — Application relaunch after updates
+
+### External Integrations
+- **TMDB API:** Movie/TV metadata, posters, and episode details
+- **OpenSubtitles.com REST API:** Subtitle search, download, and personal account authentication
+
+### Build, Signing & Release Pipeline
+- **Bundler:** Tauri NSIS target producing `CineVity_<version>_x64-setup.exe`
+- **Security:** Minisign cryptographic signing (`TAURI_SIGNING_PRIVATE_KEY`) generating `.sig` update signatures
+- **Distribution:** `scripts/release.ps1` bumps versions across `package.json`, `Cargo.toml`, and `tauri.conf.json`, builds & signs the installer, generates `latest.json`, and publishes the release to `kuriouss33/cinevity-releases` via GitHub CLI (`gh`).
