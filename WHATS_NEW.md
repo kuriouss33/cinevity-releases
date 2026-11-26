@@ -8,6 +8,18 @@
 
 Ez a dokumentum összefoglalja a **CineVity** egyes kiadásainak új funkcióit és fejlesztéseit.
 
+### v1.4.2 (2026-11-26)
+- **Bővített 30 lépéses kétnyelvű interaktív bemutató (HU/EN):** Teljes Médiaszerver és TV Központ bemutató lépésről lépésre vezetett vezeték nélküli TV app telepítési útmutatóval Android TV-hez (`.apk` + ADB) és Samsung Tizenhez (`.wgt` + SDB), szekciós gyorsugró gombokkal és az eddig hiányzó funkciókkal (Okos PC keresés, Folytatás és Következő sáv, Kollekció jobbklikkes menü, TV Direct Play / hang-optimalizálás).
+- **Megújult Kollekció oldal:** Középre igazított kétsoros eszköztár, húzható méretezhető elválasztó a könyvespolc és a részletező panel között (`localStorage` mentéssel), valamint kétoszlopos részletező panel a poszter alatt sorakozó műveleti gombokkal és a jobb alsó sarokba helyezett `HU / EN` leírásváltóval.
+- **Reszponzív lejátszó vezérlők & `960×580` minimum ablakméret:** Konténer-lekérdezésen alapuló reszponzív alsó vezérlősáv (keskenyebb ablaknál vagy széles oldalsávoknál automatikusan ikon-módba vált a Távirányító, TV-re küldés, Minilejátszó és Teljes képernyő gomb), dinamikus oldalsáv-szélesség korlátozás, a jobb oldalsáv `HU/EN`/`Névjegy`/`Bemutató` gombjainak szélességjavítása, valamint `960×580`-as főablak minimum (a `260×146`-os lebegő minilejátszó megőrzésével).
+- **Megbízhatóbb Windows frissítések (NSIS háttérfolyamat-takarítás):** Telepítés, frissítés és eltávolítás előtt automatikusan leállítja a háttérben futó `adb.exe`, `sdb.exe`, `mediaserver.exe`, `ffmpeg.exe` és `ffprobe.exe` folyamatokat (megelőzve az `AdbWinApi.dll` zárolási hibát), valamint bezáráskor takarítja az `adb.exe`/`sdb.exe` démonokat.
+
+### v1.4.1 (2026-11-26)
+- **TV lejátszási értesítések áthelyezése:** A tekerési jelző (Seek HUD) és a lejátszás közbeni képernyő-értesítések a képernyő közepéről közvetlenül a seekbar fölé kerültek, így nem takarják el a középső navigációs gombokat.
+- **Letisztult feliratbetöltés:** Eltávolításra került a teljes feliratsáv betöltésekor megjelenő, a betöltött sorok számát jelző értesítés.
+- **TV kezdőképernyő tisztítása:** A „Transzkód Debug” menüpont elrejtve a TV alkalmazások kezdőképernyőjéről.
+- **Frissített v1.4.1 csomagok:** Újracsomagolt Samsung Tizen (`.wgt`), Android TV (`.apk`), Médiaszerver és Windows asztali telepítő.
+
 ### v1.4.0 (2026-11-24)
 - **Integrált CineVity Médiaszerver & FFmpeg csomag:** A telepítő immár alapból tartalmazza a hordozható CineVity Médiaszervert, a hardveres FFmpeg/FFprobe motorokat és a TV webes klienst — külön szervertelepítés vagy kézi beállítás nélkül működik bármely Windows PC-n.
 - **Egykattintásos Android TV és Samsung Tizen TV App Telepítő:** Új **TV App Telepítő** fül a Médiaszerver központban, amely tartalmazza a beépített `CineVity-AndroidTV.apk` (+ ADB), `CineVity.wgt` (+ SDB) fájlokat, automatikus LAN TV kereséssel és lépésről lépésre útmutatóval.
@@ -44,6 +56,18 @@ Ez a dokumentum összefoglalja a **CineVity** egyes kiadásainak új funkcióit 
 ## 🇬🇧 English
 
 This document summarizes the new features and improvements added in each **CineVity** release.
+
+### v1.4.2 (2026-11-26)
+- **Expanded 30-Step Bilingual Interactive Tutorial (HU/EN):** Full Media Server & TV Hub walkthrough with step-by-step wireless TV app installation guides for Android TV (`.apk` + ADB) and Samsung Tizen (`.wgt` + SDB), section quick-jump pills, and coverage of previously missing features (Smart Scan PC, Continue Watching & Up Next, Collection context menu, TV Direct Play / Audio Optimization).
+- **Redesigned Collection Page:** Centered 2-row toolbar, draggable resizable divider between bookshelf and details panes (saved in `localStorage`), and a 2-column details panel with stacked poster action buttons and a bottom-right `HU / EN` overview toggle.
+- **Responsive Player Controls & `960×580` Minimum Window Size:** Container-query responsive bottom bar (auto-collapses Remote, Cast to TV, Mini-Player, Fullscreen to icon-only buttons on narrow viewports or wide sidebars), dynamic sidebar width clamping, right-sidebar `HU/EN`/`About`/`Tour` button width fix, and `960×580` minimum main window floor (preserving `260×146` Floating Mini-Player).
+- **Reliable Windows Upgrades (NSIS Daemon Cleanup):** Automatically stops leftover `adb.exe`, `sdb.exe`, `mediaserver.exe`, `ffmpeg.exe`, and `ffprobe.exe` processes during install/upgrade/uninstall (fixing locked `AdbWinApi.dll` errors) and cleans up `adb.exe`/`sdb.exe` on app exit.
+
+### v1.4.1 (2026-11-26)
+- **Repositioned TV Playback Notifications:** Moved the seek HUD and playback on-screen notifications from the center of the screen to directly above the seekbar so they never overlap the center D-pad navigation controls.
+- **Cleaner Subtitle Loading:** Removed the on-screen notification showing the number of subtitle lines loaded when loading a subtitle track.
+- **Cleaner TV Home Screen:** Hidden the "Transzkód Debug" menu button from the TV apps' home screen.
+- **Updated v1.4.1 Packages:** Rebuilt and bundled Samsung Tizen (`.wgt`), Android TV (`.apk`), Media Server, and Windows desktop installer packages.
 
 ### v1.4.0 (2026-11-24)
 - **Integrated CineVity Media Server & FFmpeg Bundle:** The Windows installer now bundles the portable CineVity Media Server, FFmpeg/FFprobe binaries, and the TV web client out of the box—no separate downloads or hardcoded paths needed.
