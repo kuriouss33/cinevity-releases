@@ -8,6 +8,12 @@
 
 Ez a dokumentum összefoglalja a **CineVity** egyes kiadásainak új funkcióit és fejlesztéseit.
 
+### v1.5.0 (2026-11-27)
+- **Beépített AI felskálázás alapból (Out-of-the-Box):** A telepítő immár gyárilag tartalmazza a teljes VapourSynth R73, a beágyazott Python 3.12, a VSORT DirectML motor és a `2xNomosUni_compact_otf_medium.onnx` modell futtatókörnyezetét — külön letöltés nélkül, azonnal használható bármely Windows PC-n.
+- **Újrafordított CineVity Médiaszerver & javított TV/Web kliens:** Javítva az asztali Firefox/Brave böngészők 4K/HDR/HEVC végtelen töltési hibája nagy felbontású monitorokon (`is4KDisplay` és Samsung TV mód szétválasztásával), valamint pontosabb natív HLS hibakezelés, visszalépési lánc és autoplay kezelés.
+- **Frissített beépített TV alkalmazások & csomagolt eszközök:** Naprakész `CineVity-AndroidTV.apk` (+ ADB), `CineVity.wgt` (+ SDB), frissített `mediaserver.exe`, `ffmpeg.exe`/`ffprobe.exe` és `libmpv-2.dll` egyetlen telepítőben.
+- **Teljes körű biztonsági, stabilitási, memóriaszivárgás- és teljesítményjavítások:** Átfogó kódbázis-audit és megerősítés az asztali lejátszóban, a médiaszerverben és a TV/web kliensben minden meglévő funkció megőrzésével.
+
 ### v1.4.2 (2026-11-26)
 - **Bővített 30 lépéses kétnyelvű interaktív bemutató (HU/EN):** Teljes Médiaszerver és TV Központ bemutató lépésről lépésre vezetett vezeték nélküli TV app telepítési útmutatóval Android TV-hez (`.apk` + ADB) és Samsung Tizenhez (`.wgt` + SDB), szekciós gyorsugró gombokkal és az eddig hiányzó funkciókkal (Okos PC keresés, Folytatás és Következő sáv, Kollekció jobbklikkes menü, TV Direct Play / hang-optimalizálás).
 - **Megújult Kollekció oldal:** Középre igazított kétsoros eszköztár, húzható méretezhető elválasztó a könyvespolc és a részletező panel között (`localStorage` mentéssel), valamint kétoszlopos részletező panel a poszter alatt sorakozó műveleti gombokkal és a jobb alsó sarokba helyezett `HU / EN` leírásváltóval.
@@ -56,6 +62,12 @@ Ez a dokumentum összefoglalja a **CineVity** egyes kiadásainak új funkcióit 
 ## 🇬🇧 English
 
 This document summarizes the new features and improvements added in each **CineVity** release.
+
+### v1.5.0 (2026-11-27)
+- **Bundled AI Upscaling Out of the Box:** The Windows installer now ships with the complete VapourSynth R73, embedded Python 3.12, VSORT DirectML runtime, and `2xNomosUni_compact_otf_medium.onnx` model pre-bundled — ready for instant activation with zero extra downloads.
+- **Rebuilt CineVity Media Server & Updated TV/Web Client:** Fixed infinite loading on desktop Firefox and Brave browsers for 4K/HDR/HEVC titles on high-resolution monitors by separating `.is-4k` UI scaling from Samsung Tizen TV stream detection, plus improved native HLS handler ordering, fallbacks, and autoplay recovery.
+- **Updated Bundled TV Apps & Dependencies:** Includes refreshed `CineVity-AndroidTV.apk` (+ ADB), `CineVity.wgt` (+ SDB), rebuilt `mediaserver.exe`, `ffmpeg.exe`/`ffprobe.exe`, and `libmpv-2.dll` all out of the box.
+- **Comprehensive Security, Stability, Memory-Leak & Performance Hardening:** Full codebase audit fixes across the Desktop Player, Media Server, and TV Web Client while preserving all existing functionality.
 
 ### v1.4.2 (2026-11-26)
 - **Expanded 30-Step Bilingual Interactive Tutorial (HU/EN):** Full Media Server & TV Hub walkthrough with step-by-step wireless TV app installation guides for Android TV (`.apk` + ADB) and Samsung Tizen (`.wgt` + SDB), section quick-jump pills, and coverage of previously missing features (Smart Scan PC, Continue Watching & Up Next, Collection context menu, TV Direct Play / Audio Optimization).
